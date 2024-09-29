@@ -1,9 +1,9 @@
 const express = require('express');
-const authRoutes = require('../routes/authRoutes');
-const songRoutes = require('../routes/songRoutes');
-const homeRoutes = require('../routes/homeRoutes');
-const app = require('./app');
-const {connectDB} = require('../config/db')
+const authRoutes = require('./src/routes/authRoutes');
+const songRoutes = require('./src/routes/songRoutes');
+const homeRoutes = require('./src/routes/homeRoutes');
+const app = require('./src/Services/app');
+const {connectDB} = require('./src/config/db')
 
 app.use(express.json());
 app.use('/api/auth', authRoutes);
